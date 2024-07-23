@@ -19,7 +19,7 @@
 # "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
 # LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
 # FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-# COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,set
 # INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
 # BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
 # LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
@@ -227,21 +227,21 @@ class RobotSteering(Plugin):
         self._widget.z_angular_slider.setValue(
             self._widget.z_angular_slider.value() - self._widget.z_angular_slider.singleStep())
 
-    def _on_max_x_linear_changed(self, value):
+    def _on_max_x_linear_changed(self, value):    	
         self._widget.x_linear_slider.setMaximum(
-            value * RobotSteering.slider_factor)
+            int(value * RobotSteering.slider_factor))   
 
     def _on_min_x_linear_changed(self, value):
         self._widget.x_linear_slider.setMinimum(
-            value * RobotSteering.slider_factor)
+            int(value * RobotSteering.slider_factor))
 
     def _on_max_z_angular_changed(self, value):
         self._widget.z_angular_slider.setMaximum(
-            value * RobotSteering.slider_factor)
+            int(value * RobotSteering.slider_factor))
 
     def _on_min_z_angular_changed(self, value):
         self._widget.z_angular_slider.setMinimum(
-            value * RobotSteering.slider_factor)
+            int(value * RobotSteering.slider_factor))
 
     def _on_strong_increase_x_linear_pressed(self):
         self._widget.x_linear_slider.setValue(
